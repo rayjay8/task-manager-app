@@ -1,0 +1,1 @@
+.loading{display:flex;justify-content:center;align-items:center;background-color:#181820;position:fixed;width:83%;height:calc(100% - 60px);right:0;z-index:999}@media(max-width: 768px){.loading{width:100%}}

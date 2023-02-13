@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url(./fonts/Everett-Regular.otf);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+$font: "Helvetica";
+$white: #fff;
+$black: #000;
+$gray: #ebebeb;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181820;
+  font-family: $font;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+input,
+textarea,
+button,
+select,
+span,
+img,
+div,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

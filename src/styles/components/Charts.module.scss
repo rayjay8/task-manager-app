@@ -1,0 +1,115 @@
+.charts {
+  height: calc(100vh - 60px);
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 83%;
+  right: 0;
+  background-color: #181820;
+  padding: 3% 15% 3% 15%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Inter";
+    color: #f5f5f5;
+  }
+  .data {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    .totalCard {
+      background-color: #21212b;
+      width: 100%;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 25px 25px;
+      opacity: 0.9;
+      flex: 1;
+      // flex-basis: 33.33%;
+      height: 200px;
+      background-color: #ff69b4;
+      h1 {
+        font-size: 1.2rem;
+        color: #f5f5f5;
+        text-align: start;
+        align-self: flex-start;
+        span {
+          color: #ffffffbf;
+        }
+      }
+      h1:nth-child(2) {
+        font-size: 3rem;
+        text-align: end;
+        align-self: flex-end;
+      }
+    }
+    .card {
+      background-color: #343444;
+      width: 100%;
+      height: 150px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 25px 25px;
+      opacity: 0.9;
+      h1 {
+        font-size: 1.2rem;
+        color: #f5f5f5;
+        text-align: start;
+        align-self: flex-start;
+        span {
+          color: #ffffffbf;
+        }
+      }
+      h1:nth-child(2) {
+        font-size: 3rem;
+        text-align: end;
+        align-self: flex-end;
+      }
+    }
+    .card:nth-child(2) {
+      background-color: #0aad4b;
+    }
+    .card:nth-child(3) {
+      background-color: #ff3e21;
+    }
+    .card:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.charts::-webkit-scrollbar {
+  display: none;
+}
+
+.charts {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .charts {
+    width: 100%;
+    padding: 10% 5% 25% 5%;
+    height: 100%;
+    h1 {
+      font-size: 1.2rem;
+    }
+    .data {
+      flex-wrap: wrap;
+      .totalcard {
+        flex: 0;
+      }
+    }
+  }
+}

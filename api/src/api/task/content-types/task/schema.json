@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c"
+      ],
+      "required": true
+    },
+    "uid": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "default": "None"
+    },
+    "userId": {
+      "type": "string"
+    }
+  }
+}

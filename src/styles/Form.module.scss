@@ -1,0 +1,304 @@
+$gray: #00000080;
+$pink: #ff69b4;
+
+.form {
+  height: calc(100vh - 60px);
+  position: absolute;
+  overflow-y: scroll;
+  width: 83%;
+  right: 0;
+  background-color: #181820;
+  padding: 3% 18% 0 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    color: #fff !important;
+    border: none !important;
+  }
+  select {
+    color: #fff !important;
+    border: none !important;
+  }
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Inter";
+  // padding: 0 25%;
+  padding-top: 3%;
+  .heading {
+    color: #f5f5f5;
+    margin-bottom: 50px;
+    align-self: flex-start;
+    font-size: 1.5rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    label {
+      color: #fff !important;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      input {
+        height: 50px;
+        border: 1px solid #cccccc;
+        border-radius: 15px;
+        padding: 0 20px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #fff;
+        background-color: #21212c;
+      }
+      textarea {
+        height: 150px;
+        border: none;
+        border-radius: 15px;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #fff;
+        font-family: inherit;
+        background-color: #21212c;
+        resize: none;
+      }
+      textarea:focus {
+        outline: 2px solid $pink;
+        border: none;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // gap: 50px;
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        label {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: $gray;
+        }
+        input[type="date"],
+        input[type="time"] {
+          font-family: inherit;
+          height: 50px;
+          border: 1px solid #cccccc;
+          border-radius: 15px;
+          padding: 0 15px;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #fff;
+          text-transform: uppercase;
+        }
+        select {
+          font-family: inherit;
+          height: 50px;
+          width: 150px;
+          border: 1px solid #cccccc;
+          border-radius: 15px;
+          // padding: 0 15px;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #fff;
+          appearance: none;
+          text-align: center;
+          background-color: #21212c !important;
+          option {
+            text-align: center;
+          }
+        }
+        select:focus {
+          outline: 2px solid $pink;
+          border: none;
+        }
+      }
+    }
+  }
+  input:focus {
+    outline: 2px solid $pink;
+    border: none;
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff69b4;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.1s;
+    &:hover {
+      background-color: #ff69b4b3;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $gray;
+  }
+  input[type="date"],
+  input[type="time"] {
+    font-family: inherit;
+    height: 50px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #21212c;
+  }
+  select {
+    font-family: inherit;
+    background-color: #21212c;
+    height: 50px;
+    width: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    // padding: 0 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    appearance: none;
+    text-align: center;
+    option {
+      text-align: center;
+    }
+  }
+  select:focus {
+    outline: 2px solid $pink;
+    border: none;
+  }
+}
+
+.form::-webkit-scrollbar {
+  display: none;
+}
+
+.success {
+  position: fixed;
+  background-color: #16db65;
+  padding: 1% 5%;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  top: 12%;
+  h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #181820;
+  }
+  .home {
+    text-decoration: underline;
+    font-weight: 400;
+    color: #181820;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+    padding: 10% 5% 30% 5%;
+    height: 100%;
+    .heading {
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+    }
+    .row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 40px;
+      label {
+        font-size: 1rem;
+      }
+      input[type="date"],
+      input[type="time"] {
+        width: 50%;
+      }
+      select {
+        width: 50%;
+      }
+    }
+    form {
+      .column {
+        label {
+          margin-bottom: 20px;
+        }
+        textarea {
+          height: 100px;
+        }
+      }
+      .container {
+        flex-direction: column;
+        gap: 40px;
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          background: none;
+          display: none;
+        }
+        input[type="time"]::-webkit-calendar-picker-indicator {
+          background: none;
+          display: none;
+        }
+        .row {
+          gap: 10px;
+        }
+      }
+      button {
+        font-size: 1rem;
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .form {
+    .container {
+      flex-direction: column;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+  }
+  .success {
+    padding: 3% 8%;
+    h1 {
+      font-size: 0.8rem;
+    }
+    .home {
+      font-size: 0.7rem;
+    }
+  }
+}
